@@ -43,32 +43,24 @@ Diseñar e implementar un servicio backend capaz de:
 ## 📋 Requerimientos funcionales
 
 ### 1️⃣ Listar productos
-- **Endpoint:** `GET /api/products`
+- **Endpoint:** `GET /products`
 - **Origen:** `https://dummyjson.com/products`
-- **Retorna:** `id`, `title`, `price`, `category`, `rating`.
+- **Retorna:** `title`, `price`.
 
 ---
 
 ### 2️⃣ Obtener producto por ID
-- **Endpoint:** `GET /api/products/{id}`
+- **Endpoint:** `GET /products/{id}`
 - **Origen:** `https://dummyjson.com/products/{id}`
 - **Error:** Retorna `404` con el mensaje `"Producto no encontrado"` si el ID no existe.
 
 ---
 
 ### 3️⃣ Filtrar productos por categoría
-- **Endpoint:** `GET /api/products/category/{category}`
+- **Endpoint:** `GET /products/category/{category}`
 - **Origen:** `https://dummyjson.com/products/category/{category}`
-- **Retorna:** Lista filtrada con `id`, `title`, `price`, `category`, `rating`.
+- **Retorna:** Lista filtrada con `title`, `price`.
 
----
-
-### 4️⃣ Simular creación de producto
-- **Endpoint:** `POST /api/products`
-- **Destino:** `https://dummyjson.com/products/add`
-- **Función:** Simula la creación de un producto y devuelve la respuesta del servicio externo.
-
----
 
 ## 🧠 Evaluación técnica
 Se evaluarán los siguientes aspectos:
@@ -76,10 +68,8 @@ Se evaluarán los siguientes aspectos:
 | Criterio | Descripción |
 |-----------|-------------|
 | ✅ **Configuración de WebClient** | Uso correcto y reactivo para consumo de APIs externas. |
-| ⚡ **Manejo de errores HTTP** | Implementación de `onStatus`, control de respuestas 4xx/5xx. |
+| ⚡ **Manejo de errores HTTP** |
 | 🧩 **Arquitectura limpia** | Separación clara en capas: Controller, Service, Repository. |
-| 📦 **Modelado de datos** | Uso correcto de DTOs y buenas prácticas de nombrado. |
-| 📘 **Documentación** | README completo, conciso y profesional. |
 
 ---
 
@@ -92,7 +82,7 @@ mvn spring-boot:run
 
 ### 🌐 API local
 ```
-http://localhost:8080/api/products
+http://localhost:8080/
 ```
 
 ### 📦 Estructura esperada
@@ -136,7 +126,7 @@ src/
 
 ## ✨ Autor
 
-**Desarrollador Backend Java Junior**
+**Desarrollado por Sebastian Parra - Desarrollador Backend Java Junior**
 > Proyecto desarrollado como práctica profesional para fortalecer habilidades en **consumo de APIs**, **arquitectura limpia** y **desarrollo reactivo con Spring Boot**.
 
 ---
