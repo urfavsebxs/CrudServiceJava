@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Crud Service by Sebastian Parra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>Lista de Productos</h1>
+<ul id="product-list"></ul>
+
+<script>
+    fetch('/products')
+        .then(response => response.json())
+        .then(data => {
+            const list = document.getElementById('product-list');
+
+
+            data.products.forEach(product => {
+                const item = document.createElement('li');
+                item.textContent = `${product.title} - $${product.price}`;
+                list.appendChild(item);
+            });
+        })
+        .catch(err => console.error('Error cargando productos:', err));
+</script>
+</body>
+</html>
