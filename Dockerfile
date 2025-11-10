@@ -7,7 +7,7 @@ COPY src src
 RUN mvn clean package -DskipTests
 
 # ETAPA 2: RUNTIME (Ejecución)
-FROM eclipse-temurin:17-jre‑jammy
+FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
