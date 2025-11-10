@@ -126,7 +126,7 @@ src/
 └────────────┬───────────────┘
              │
 ┌────────────▼───────────────┐
-│         Repository         │
+│         Client         │
 │  Consume la API externa    │
 │  (DummyJSON) con WebClient │
 └────────────────────────────┘
